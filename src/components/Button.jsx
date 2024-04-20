@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import themeContext from "../context/theme";
+import ThemeContext from "../context/ThemeContext";
 
-function Button({ text, className, ...props }) {
-  const theme = useContext(themeContext);
-  console.log(theme);
+export default function Button({ text, className, ...props }) {
+  const theme = useContext(ThemeContext);
 
   return (
     <button
@@ -14,5 +13,3 @@ function Button({ text, className, ...props }) {
     </button>
   );
 }
-
-export default Button;
